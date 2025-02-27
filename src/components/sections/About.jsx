@@ -122,7 +122,7 @@ export const About = () => {
                 <h4 className="text-lg font-bold">
                   <strong>
                     IEEE EMBS SBC Program, Intern IIT Kharagpur - (June 2024 –
-                    Aug. 2024)
+                    Oct. 2024)
                   </strong>
                 </h4>
                 <p>

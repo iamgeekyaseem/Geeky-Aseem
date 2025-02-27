@@ -10,7 +10,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-xl font-bold text-white">
-            Geeky<span className="text-blue-500">.Aseem</span>
+            iamGeeky<span className="text-blue-500">Aseem</span>
           </a>
 
           <div
@@ -31,7 +31,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
             <a
               href="#about"
-              className="text-gray-300 hove:white transition-colors"
+              className="text-gray-300 hover:white transition-colors"
             >
               {" "}
               About{" "}
@@ -39,7 +39,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
             <a
               href="#projects"
-              className="text-gray-300 hove:white transition-colors"
+              className="text-gray-300 hover:white transition-colors"
             >
               {" "}
               Projects{" "}
@@ -47,7 +47,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
             <a
               href="#contact"
-              className="text-gray-300 hove:white transition-colors"
+              className="text-gray-300 hover:white transition-colors"
             >
               {" "}
               Contact{" "}
