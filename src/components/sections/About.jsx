@@ -82,12 +82,15 @@ export const About = () => {
                 </strong>
               </li>
               <li>
-                <strong>DAV Public School</strong>, Senior Secondary Education ( Aug. 2018– May 2020)
+                <strong>DAV Public School</strong>, Senior Secondary Education (
+                Aug. 2018– May 2020)
               </li>
             </ul>
           </div>
           <div className="p-6 rounded-xl border-white/10 border hover:translate-y-1 transition-all">
-            <h3 className="text-xl font-bold mb-4 text-blue-300">Work Experience</h3>
+            <h3 className="text-xl font-bold mb-4 text-blue-300">
+              Work Experience
+            </h3>
             <div className="space-y-4 text-gray-300 ">
               <div>
                 <h4 className="text-lg font-bold">
@@ -132,6 +135,27 @@ export const About = () => {
                     <li>
                       The design and modeling of a microelectrode were carried
                       out by me using COMSOL Multiphysics software.
+                    </li>
+                  </ul>
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold">
+                  <strong>
+                    Freelance Graphic Designer - (April 2024 – Sept. 2024)
+                  </strong>
+                </h4>
+                <p>
+                  <ul className="list-disc list-inside text-gray-300 space-y-2">
+                    <li>
+                      Worked for publishing of monthly white papers, brochures,
+                      and social media content for a product management company
+                      called ShorterLoop.
+                    </li>
+                    <li>
+                      Worked for TEDx NIT Andhra Pradesh for designing posters,
+                      social media content that immensely increased the reach of
+                      the event upto 300k+ audience.
                     </li>
                   </ul>
                 </p>
