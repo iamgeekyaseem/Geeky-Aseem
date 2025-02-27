@@ -129,7 +129,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="https://github.com/iamgeekyaseem/Adsorption-of-Dye-Comparative-Study-Models"
+                  href="https://github.com/iamgeekyaseem/CineWorld"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -164,7 +164,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="https://github.com/iamgeekyaseem/Adsorption-of-Dye-Comparative-Study-Models"
+                  href="https://github.com/iamgeekyaseem/Dad-Joke-Chrome-Extention"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
