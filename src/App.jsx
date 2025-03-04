@@ -17,7 +17,7 @@ function App() {
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
       <div
-        className={` transition-opacity duration-700 ${
+        className={`transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100`}
       ></div>
@@ -31,5 +31,5 @@ function App() {
     </>
   );
 }
-
+// Fixing the bug
 export default App;
