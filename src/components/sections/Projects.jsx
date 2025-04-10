@@ -17,7 +17,7 @@ export const Projects = () => {
                 Toxicity Analysis of Dye
               </h2>
               <p className="text-gray-400 mb-6">
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>
                     Developed a fuzzy logic-based model for the biosorption of
                     toxic dye using Trichoderma harzianum.
@@ -58,7 +58,7 @@ export const Projects = () => {
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
               <h2 className="text-xl font-bold mb-2">Nerds-Connect</h2>
               <p className="text-gray-400 mb-6">
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>
                     Developed a full-stack social media web application using
                     Node.js, Express.js, and EJS for server-side rendering and
@@ -106,7 +106,7 @@ export const Projects = () => {
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
               <h2 className="text-xl font-bold mb-2">Cine World</h2>
               <p className="text-gray-400 mb-6">
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>
                     Developed a front-end web application using React.js for
                     component-based UI & state management.
@@ -142,7 +142,7 @@ export const Projects = () => {
                 Dad-Jokes Chrome Extention
               </h2>
               <p className="text-gray-400 mb-6">
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>One of my first basic project using HTML/JavaScript</li>
                   <li>
                     Uses API to fetch JSON and scrape the data to display jokes.

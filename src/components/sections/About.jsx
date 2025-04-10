@@ -74,7 +74,7 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4 text-blue-300">
                 Education
               </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <ul className="list-disc list-outside text-gray-300 space-y-2">
                 <li>
                   <strong>B.Tech in Biotechnology</strong> - National Institute
                   of Technology Andhra Pradesh (Dec. 2021– Aug. 2025)
@@ -105,7 +105,7 @@ export const About = () => {
                     </strong>
                   </h4>
                   <p>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                    <ul className="list-disc list-outside text-gray-300 space-y-2">
                       <li>
                         Developed a deep learning solution for quantification of
                         fluorescent dots: Application in diagnosis of Diabetic
@@ -132,7 +132,7 @@ export const About = () => {
                     </strong>
                   </h4>
                   <p>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                    <ul className="list-disc list-outside text-gray-300 space-y-2">
                       <li>
                         Analyzed over 50+ peer-reviewed studies to identify
                         current trends, challenges on retinal prostheses as
@@ -152,7 +152,7 @@ export const About = () => {
                     </strong>
                   </h4>
                   <p>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                    <ul className="list-disc list-outside text-gray-300 space-y-2">
                       <li>
                         Worked for publishing of monthly white papers,
                         brochures, and social media content for a product
