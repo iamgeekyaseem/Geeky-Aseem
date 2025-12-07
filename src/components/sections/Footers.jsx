@@ -61,7 +61,7 @@ export const Footer = () => {
             </div>
 
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a className="text-gray-400 hover:text-blue-400 transition" href="https://twitter.com/theaseemgupta">Twitter</a>
+              <a className="text-gray-400 hover:text-blue-400 transition" href="https://twitter.com/iamgeekyaseem">Twitter</a>
               <a className="text-gray-400 hover:text-blue-400 transition" href="https://github.com/iamgeekyaseem">GitHub</a>
               <a className="text-gray-400 hover:text-blue-400 transition" href="https://linkedin.com/in/theaseemgupta">LinkedIn</a>
             </div>
