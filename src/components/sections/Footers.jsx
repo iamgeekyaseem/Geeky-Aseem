@@ -1,15 +1,31 @@
 import { useEffect } from "react";
 
 export const Footer = () => {
-  const techStack = [
-    { name: 'Python', icon: '🐍', color: 'from-blue-500 to-blue-600' },
-    { name: 'TensorFlow', icon: '🧠', color: 'from-orange-500 to-orange-600' },
-    { name: 'PyTorch', icon: '⚡', color: 'from-red-500 to-red-600' },
-    { name: 'YOLO', icon: '🎯', color: 'from-purple-500 to-purple-600' },
-    { name: 'React', icon: '⚛️', color: 'from-cyan-500 to-cyan-600' },
-    { name: 'Docker', icon: '🐳', color: 'from-blue-400 to-blue-500' },
-    { name: 'SQL', icon: '💾', color: 'from-green-500 to-green-600' },
-    { name: 'Git', icon: '🔗', color: 'from-orange-600 to-orange-700' },
+  const projects = [
+    {
+      name: 'Toxicity Analysis of Dye',
+      description: 'Predictive modeling with fuzzy logic',
+      stars: 24,
+      forks: 8,
+      url: 'https://github.com/iamgeekyaseem/Toxicity-Analysis-of-Dye',
+      language: 'Python'
+    },
+    {
+      name: 'Video RAG Q&A Bot',
+      description: 'End-to-end RAG pipeline using Whisper & ChromaDB',
+      stars: 18,
+      forks: 5,
+      url: 'https://github.com/iamgeekyaseem/Video-RAG-QA-Bot',
+      language: 'Python'
+    },
+    {
+      name: 'Geeky-Aseem Portfolio',
+      description: 'Modern portfolio built with React & Vite',
+      stars: 12,
+      forks: 3,
+      url: 'https://github.com/iamgeekyaseem/Geeky-Aseem',
+      language: 'JavaScript'
+    }
   ];
 
   useEffect(() => {
@@ -35,21 +51,58 @@ export const Footer = () => {
   return (
     <footer className=" text-white py-16">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Tech Stack Visual Section */}
+        
+        {/* Featured on GitHub Section */}
         <div className="mb-16 pb-12 border-b border-gray-700">
           <h3 className="text-2xl font-bold mb-8 text-center text-white">
-            Tech Stack
+            Featured on GitHub
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {techStack.map((tech, index) => (
-              <div
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <a
                 key={index}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800 transition-all transform hover:scale-105"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-5 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-gray-500 transition-all transform hover:scale-105 hover:shadow-lg"
               >
-                <div className={`text-4xl mb-1`}>{tech.icon}</div>
-                <p className="text-xs font-medium text-gray-300 text-center">{tech.name}</p>
-              </div>
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-white group-hover:text-gray-200 transition">
+                      {project.name}
+                    </h4>
+                    <span className="inline-block mt-2 px-2 py-1 text-xs font-medium bg-gray-800 text-gray-300 rounded">
+                      {project.language}
+                    </span>
+                  </div>
+                  <span className="text-2xl">📂</span>
+                </div>
+                
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                  {project.description}
+                </p>
+                
+                <div className="flex gap-4 text-sm text-gray-500">
+                  <span className="flex items-center gap-1 hover:text-yellow-400 transition">
+                    ⭐ {project.stars}
+                  </span>
+                  <span className="flex items-center gap-1 hover:text-blue-400 transition">
+                    🍴 {project.forks}
+                  </span>
+                </div>
+              </a>
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <a
+              href="https://github.com/iamgeekyaseem"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gray-800 hover:bg-gray-700 text-white py-2 px-6 rounded-full font-medium transition border border-gray-700 hover:border-gray-600"
+            >
+              View All Projects on GitHub →
+            </a>
           </div>
         </div>
         
