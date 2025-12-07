@@ -19,16 +19,10 @@ export const Projects = () => {
               <p className="text-gray-400 mb-6">
                 <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>
-                    Developed a fuzzy logic-based model for the biosorption of
-                    toxic dye using Trichoderma harzianum.
+                    Developed a predictive modeling system integrating fuzzy logic for biosorption efficiency analysis of toxic dyes using Trichoderma harzianum.
                   </li>
                   <li>
-                    Applied machine learning models to analyze and predict the
-                    adsorption capacity.
-                  </li>
-                  <li>
-                    Comparative test using models like SVR, Random Forest,
-                    Decision Tree, XGBoost, and ANN.
+                    Comparative test using models like SVR, Random Forest, Decision Tree, XGBoost, and ANN.
                   </li>
                   <li>Achieved a prediction accuracy of 95%.</li>
                 </ul>
@@ -56,35 +50,19 @@ export const Projects = () => {
             </div>
 
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all">
-              <h2 className="text-xl font-bold mb-2">Nerds-Connect</h2>
+              <h2 className="text-xl font-bold mb-2">Video RAG Q&A Bot</h2>
               <p className="text-gray-400 mb-6">
                 <ul className="list-disc list-outside text-gray-300 space-y-2">
                   <li>
-                    Developed a full-stack social media web application using
-                    Node.js, Express.js, and EJS for server-side rendering and
-                    dynamic content generation.
+                    Engineered an end-to-end Retrieval-Augmented Generation (RAG) pipeline to transform any YouTube video into an interactive, queryable knowledge base.
                   </li>
                   <li>
-                    Implemented database management with MongoDB and integrated
-                    authentication mechanisms for secure access.
-                  </li>
-                  <li>
-                    Enhanced user interaction using Socket.io for real-time
-                    communication, and styled with SASS for scalable CSS.
+                    Built a modular data pipeline using Whisper for accurate transcription, spaCy for Named Entity Recognition (NER), and Sentence-Transformers to create embeddings, indexing them in a ChromaDB vector store.
                   </li>
                 </ul>
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {[
-                  "Node.js",
-                  "Express",
-                  "EJS",
-                  "MongoDB",
-                  "SASS",
-                  "AJAX",
-                  "RESTfulAPIs",
-                  "Git",
-                ].map((skill, key) => (
+                {["Python", "RAG", "LLMs", "VectorDB"].map((skill, key) => (
                   <span
                     key={skill}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59, 130, 224, 0.2)] transition"
@@ -95,7 +73,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="https://github.com/iamgeekyaseem/Nerds-Connect"
+                  href="#"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
