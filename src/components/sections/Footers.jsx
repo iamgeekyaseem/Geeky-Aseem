@@ -1,32 +1,14 @@
 import { useEffect } from "react";
 
 export const Footer = () => {
-  const projects = [
-    {
-      name: 'Toxicity Analysis of Dye',
-      description: 'Predictive modeling with fuzzy logic',
-      stars: 24,
-      forks: 8,
-      url: 'https://github.com/iamgeekyaseem/Toxicity-Analysis-of-Dye',
-      language: 'Python'
-    },
-    {
-      name: 'Video RAG Q&A Bot',
-      description: 'End-to-end RAG pipeline using Whisper & ChromaDB',
-      stars: 18,
-      forks: 5,
-      url: 'https://github.com/iamgeekyaseem/Video-RAG-QA-Bot',
-      language: 'Python'
-    },
-    {
-      name: 'Geeky-Aseem Portfolio',
-      description: 'Modern portfolio built with React & Vite',
-      stars: 12,
-      forks: 3,
-      url: 'https://github.com/iamgeekyaseem/Geeky-Aseem',
-      language: 'JavaScript'
-    }
-  ];
+  const kaggleStats = {
+    rank: 'Novice',
+    points: 245,
+    competitions: 3,
+    notebooks: 8,
+    followers: 42,
+    profileUrl: 'https://www.kaggle.com/iamgeekyaseem'
+  };
 
   useEffect(() => {
     // If script already exists, just reload widgets
@@ -52,58 +34,56 @@ export const Footer = () => {
     <footer className=" text-white py-16">
       <div className="max-w-6xl mx-auto px-4">
         
-        {/* Featured on GitHub Section */}
+        {/* Kaggle Stats Section */}
         <div className="mb-16 pb-12 border-b border-gray-700">
           <h3 className="text-2xl font-bold mb-8 text-center text-white">
-            Featured on GitHub
+            Kaggle Stats
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-5 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-gray-500 transition-all transform hover:scale-105 hover:shadow-lg"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex-1">
-                    <h4 className="text-lg font-bold text-white group-hover:text-gray-200 transition">
-                      {project.name}
-                    </h4>
-                    <span className="inline-block mt-2 px-2 py-1 text-xs font-medium bg-gray-800 text-gray-300 rounded">
-                      {project.language}
-                    </span>
-                  </div>
-                  <span className="text-2xl">📂</span>
-                </div>
-                
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-                
-                <div className="flex gap-4 text-sm text-gray-500">
-                  <span className="flex items-center gap-1 hover:text-yellow-400 transition">
-                    ⭐ {project.stars}
-                  </span>
-                  <span className="flex items-center gap-1 hover:text-blue-400 transition">
-                    🍴 {project.forks}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <a
-              href="https://github.com/iamgeekyaseem"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gray-800 hover:bg-gray-700 text-white py-2 px-6 rounded-full font-medium transition border border-gray-700 hover:border-gray-600"
-            >
-              View All Projects on GitHub →
-            </a>
-          </div>
+          <a
+            href={kaggleStats.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-md mx-auto p-6 rounded-lg bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-gray-700 hover:border-gray-500 transition-all transform hover:scale-105"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="text-4xl">🏆</div>
+              <div>
+                <h4 className="text-xl font-bold text-white">Kaggle Profile</h4>
+                <p className="text-gray-400 text-sm">@iamgeekyaseem</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div className="bg-gray-900/50 rounded p-3 text-center">
+                <p className="text-2xl font-bold text-blue-400">{kaggleStats.rank}</p>
+                <p className="text-xs text-gray-400 mt-1">Rank</p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded p-3 text-center">
+                <p className="text-2xl font-bold text-purple-400">{kaggleStats.points}</p>
+                <p className="text-xs text-gray-400 mt-1">Points</p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded p-3 text-center">
+                <p className="text-2xl font-bold text-green-400">{kaggleStats.competitions}</p>
+                <p className="text-xs text-gray-400 mt-1">Competitions</p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded p-3 text-center">
+                <p className="text-2xl font-bold text-yellow-400">{kaggleStats.notebooks}</p>
+                <p className="text-xs text-gray-400 mt-1">Notebooks</p>
+              </div>
+              
+              <div className="bg-gray-900/50 rounded p-3 text-center col-span-2 sm:col-span-1">
+                <p className="text-2xl font-bold text-pink-400">{kaggleStats.followers}</p>
+                <p className="text-xs text-gray-400 mt-1">Followers</p>
+              </div>
+            </div>
+            
+            <button className="w-full mt-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition">
+              View Profile →
+            </button>
+          </a>
         </div>
         
         <div className="mb-12">
