@@ -1,16 +1,54 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const Footer = () => {
-  const kaggleStats = {
-    rank: 'Novice',
-    points: 245,
-    competitions: 3,
-    notebooks: 8,
-    followers: 42,
+  const [kaggleStats, setKaggleStats] = useState({
+    rank: 'Loading...',
+    points: 0,
+    competitions: 0,
+    notebooks: 0,
+    followers: 0,
     profileUrl: 'https://www.kaggle.com/iamgeekyaseem'
-  };
+  });
 
   useEffect(() => {
+    // Fetch Kaggle profile data
+    const fetchKaggleStats = async () => {
+      try {
+        // Using Kaggle API endpoint to fetch user stats
+        const response = await fetch(
+          'https://www.kaggle.com/api/v1/users/iamgeekyaseem',
+          {
+            headers: {
+              'Accept': 'application/json'
+            }
+          }
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          setKaggleStats(prev => ({
+            ...prev,
+            rank: data.tier || 'Novice',
+            points: data.medals?.gold || 0,
+            followers: data.follower_count || 0
+          }));
+        }
+      } catch (error) {
+        console.log('Kaggle stats will use default values');
+        // Fallback to default stats if API fails
+        setKaggleStats({
+          rank: 'Novice',
+          points: 245,
+          competitions: 3,
+          notebooks: 8,
+          followers: 42,
+          profileUrl: 'https://www.kaggle.com/iamgeekyaseem'
+        });
+      }
+    };
+
+    fetchKaggleStats();
+
     // If script already exists, just reload widgets
     if (window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
@@ -60,17 +98,17 @@ export const Footer = () => {
               </div>
               
               <div className="bg-gray-900/50 rounded p-3 text-center">
-                <p className="text-2xl font-bold text-purple-400">{kaggleStats.points}</p>
-                <p className="text-xs text-gray-400 mt-1">Points</p>
+                <p className="text-2xl font-bold text-purple-400">{kaggleStats.points || '—'}</p>
+                <p className="text-xs text-gray-400 mt-1">Gold Medals</p>
               </div>
               
               <div className="bg-gray-900/50 rounded p-3 text-center">
-                <p className="text-2xl font-bold text-green-400">{kaggleStats.competitions}</p>
+                <p className="text-2xl font-bold text-green-400">{kaggleStats.competitions || 3}</p>
                 <p className="text-xs text-gray-400 mt-1">Competitions</p>
               </div>
               
               <div className="bg-gray-900/50 rounded p-3 text-center">
-                <p className="text-2xl font-bold text-yellow-400">{kaggleStats.notebooks}</p>
+                <p className="text-2xl font-bold text-yellow-400">{kaggleStats.notebooks || 8}</p>
                 <p className="text-xs text-gray-400 mt-1">Notebooks</p>
               </div>
               
